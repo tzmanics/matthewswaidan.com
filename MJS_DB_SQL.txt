@@ -1,0 +1,44 @@
+-- phpMyAdmin SQL Dump
+-- version 4.0.6
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Nov 27, 2013 at 05:33 AM
+-- Server version: 5.5.33
+-- PHP Version: 5.5.3
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- Database: `matthewswaidan_loc`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `posts`
+--
+
+CREATE TABLE `posts` (
+  `post_id` int(255) NOT NULL AUTO_INCREMENT,
+  `created` int(255) NOT NULL,
+  `modified` datetime NOT NULL,
+  `post_date` varchar(255) CHARACTER SET utf8 NOT NULL,
+  `user_id` int(255) NOT NULL,
+  `post_description` text CHARACTER SET utf8 NOT NULL,
+  `post_title` tinytext CHARACTER SET utf8 NOT NULL,
+  PRIMARY KEY (`post_id`),
+  KEY `user_id` (`user_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+
+--
+-- Dumping data for table `posts`
+--
+
+INSERT INTO `posts` (`post_id`, `created`, `modified`, `post_date`, `user_id`, `post_description`, `post_title`) VALUES
+(1, 1385526300, '0000-00-00 00:00:00', '22 JUL 13', 3, 'A something of something that something', 'Something 1'),
+(2, 1385526405, '0000-00-00 00:00:00', '30 AUG 12', 3, 'Stuff Stuff Stuff stuff stuff stuff stuff', 'Something 2'),
+(3, 1385526485, '0000-00-00 00:00:00', '8 NOV 13', 3, 'adfd lkjdfal asde f fmklm andfn fjkalkdji', 'Asjkl Hgnklt Hkli'),
+(4, 1385526517, '0000-00-00 00:00:00', '4 DEC 14', 3, 'Ghtio sldkf asdke adlkfji rkni', 'Hyfioern Djklsdflk'),
+(5, 1385526540, '0000-00-00 00:00:00', '13 JAN 12', 3, ';kdfnkjdf mvkldfkv eoijgoij gjkl jkldf  j lkjf j', 'Thiorn Jklkjg Kfnknvi');
