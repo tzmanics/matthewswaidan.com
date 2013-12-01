@@ -3,7 +3,6 @@ class posts_controller extends base_controller {
 
     public function __construct() {
         parent::__construct();
-        echo "posts_controller construct called<br><br>";
     } 
 
     public function index() {
@@ -19,6 +18,14 @@ class posts_controller extends base_controller {
             # setup view & title
             $this->template->content = View::instance('v_posts_add');
             $this->template->title = "New Post";
+
+            # load js files
+            $client_files_body = Array(
+                "/js/jquery.form.js",
+                "/js/posts_add.js"
+            );
+
+            $this->template->client_files_body = Utils::load_client_files($client_files_body);
 
             #render view
             echo $this->template;

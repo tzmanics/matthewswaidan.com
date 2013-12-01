@@ -5,7 +5,7 @@
 
 		<article>
 			<h2><?=$post['post_date']?></h2>
-			<h3><?=$post['post_title']?> posted:</h2>
+			<h3><?=$post['post_title']?> posted:</h3>
 			<h4><?=$post['post_description']?></h4>
 		</article>
 		
