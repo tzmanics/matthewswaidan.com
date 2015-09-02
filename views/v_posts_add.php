@@ -1,19 +1,19 @@
 <form method='post' action='/posts/p_add'>
+  <!-- TODO: get rid of br tags and style -->
+  Post Date<br>
+  <input type='text' name='post_date'>
+  <br><br>
 
-    Post Date<br>
-    <input type='text' name='post_date'>
-    <br><br>
+  Post Title<br>
+  <input type='text' name='post_title'>
+  <br><br>
 
-    Post Title<br>
-    <input type='text' name='post_title'>
-    <br><br>
+  Post Description<br>
+  <textarea name='post_description' id='post_description'></textarea>
+  <br><br>
 
-    Post Description<br>
-    <textarea name = 'post_description' id = 'post_description'></textarea>
-    <br><br>
-
-    <input type='Submit' value='POST'>
-    <br><br>
+  <input type='Submit' value='POST'>
+  <br><br>
 
 
 </form>
